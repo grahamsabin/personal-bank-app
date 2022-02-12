@@ -24,6 +24,9 @@ export default function Create() {
  
    // When a post request is sent to the create url, we'll add a new record to the database.
    const newPerson = { ...form }; //re-apply this for user registration
+   
+   
+   //console.log(`Our user is named ${name}`); I can't use the name console log WHY??
  
    await fetch("http://localhost:5010/record/add", {
      method: "POST",

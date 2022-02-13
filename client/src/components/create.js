@@ -28,6 +28,7 @@ export default function Create() {
    
    console.log(`Our user is named ${form.name}`); 
    console.log(`Our position is ${form.position}`); 
+   console.log(`log new person ${JSON.stringify(newPerson)}`);
    
  
    await fetch("http://localhost:5010/record/add", {

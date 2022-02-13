@@ -1,3 +1,4 @@
+
 const express = require("express");
 
 // recordRoutes is an instance of the express router.
@@ -39,12 +40,15 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 // This section will help you create a new record.
 recordRoutes.route("/record/add").post(function (req, response) {
   let db_connect = dbo.getDb();
-  let myobj = {
-    person_name: req.body.person_name,
-    person_position: req.body.person_position,
-    person_level: req.body.person_level,
-  };
-  db_connect.collection("records").insertOne(myobj, function (err, res) {
+  console.log(` This is test ${req.body.name}`);
+  //let myParsedBody = JSON.parse(req.body);
+  
+  // let myobj = {
+  //   person_name: myParsedBody.person_name,
+  //   person_position: myParsedBody.person_position,
+  //   person_level: myParsedBody.person_level,
+  // };
+  db_connect.collection("records").insertOne(req.body, function (err, res) {
     if (err) throw err;
     response.json(res);
   });

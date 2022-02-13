@@ -23,10 +23,12 @@ export default function Create() {
    e.preventDefault();
  
    // When a post request is sent to the create url, we'll add a new record to the database.
-   const newPerson = { ...form }; //re-apply this for user registration
+   const newPerson = {...form }; //re-apply this for user registration
    
    
-   //console.log(`Our user is named ${name}`); I can't use the name console log WHY??
+   console.log(`Our user is named ${form.name}`); 
+   console.log(`Our position is ${form.position}`); 
+   
  
    await fetch("http://localhost:5010/record/add", {
      method: "POST",
@@ -115,6 +117,9 @@ export default function Create() {
          />
        </div>
      </form>
+    {JSON.stringify(form.name)}
+    {JSON.stringify(form.position)}
+
    </div>
  );
 }

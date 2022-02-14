@@ -54,20 +54,22 @@ recordRoutes.route("/record/add").post(function (req, response) {
   });
 });
 
+//
+
 // This section will help you update a record by id.
 recordRoutes.route("/update/:id").post(function (req, response) {
   let db_connect = dbo.getDb();
+  console.log(`testing update ${req.body.name}`); //so this properly logs the updated name -- assignment is the issue
   let myquery = { _id: ObjectId( req.params.id )};
+
   let newvalues = {
     $set: {
-      person_name: req.body.person_name,
-      person_position: req.body.person_position,
-      person_level: req.body.person_level,
+      person_name: req.body.name,
+      person_position: req.body.name,
+      person_level: req.body.name,
     },
   };
-  db_connect
-    .collection("records")
-    .updateOne(myquery, newvalues, function (err, res) {
+  db_connect.collection("records").updateOne(myquery, req.body, function (err, res) { //I'm deleting myquery as the first param
       if (err) throw err;
       console.log("1 document updated");
       response.json(res);

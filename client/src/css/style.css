@@ -9,4 +9,9 @@
     align-items: center;
   }
 
+.navlink { 
+    display: flex; 
+    justify-content: center; 
+}
+
 

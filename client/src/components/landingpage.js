@@ -9,8 +9,8 @@ export default function LandingPage(){
         return(
             <div>
                 
-                <h1 className="centerText">Graham's Bank</h1>
-
+                
+                <h4>This is a bank app with MERN</h4>
                 <div class = "centered">
                     <Link to = "/register" className="btn btn-primary">Register</Link>
 

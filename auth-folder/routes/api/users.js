@@ -38,6 +38,7 @@ if(!isValid) {
 //Checks to see if an email exists, error if it does
 User.findOne({ email: req.body.email }).then(user => {
     if(user) {
+        console.log(`Email read in is ${req.body.email}`);
         return res.status(400).json({ email: "Email already exists" });
     }
     else {

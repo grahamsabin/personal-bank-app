@@ -1,3 +1,7 @@
+//NAVBAR IS A TITLE WITH A LINK TO HOME
+    //Click on the name takes you to the landing page
+    //Navbar is fixed for every page
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 

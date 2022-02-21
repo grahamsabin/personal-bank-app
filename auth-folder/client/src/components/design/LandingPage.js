@@ -1,5 +1,13 @@
+//LANDING PAGE IS THE FIRST THING USERS SEE WHEN ARRIVING
+    //users see the navbar, a note about what the page is, and 2 buttons
+    //Register: Links to registration
+    //Login: links to login
+
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+
+
+
 
 class LandingPage extends Component {
     render() {

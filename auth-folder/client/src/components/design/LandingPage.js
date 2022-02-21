@@ -1,46 +1,41 @@
-
-import e from "express";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 class LandingPage extends Component {
     render() {
-        return (
-            <div style={{ height: "65vh" }} className = "container valign-wrapper">
+        return(
+            <div style = {{ height: "70vh"}} className="container valign-wrapper">
                 <div className="row">
                     <div className="col s12 center-align">
                         <h4>
-                            <b>Build</b> a login/auth app with the{" "}
-                            <span style = {{ fontFamily: "monospace"}}>MERN</span> stack from scratch
+                            <b>Build</b> a personal banking app with Plaid and the MERN stack
                         </h4>
-                        <p className="flow-text grey-text text-darken-1">
-                            Create a (minimal) full-stack app with user authentication via passport and JWTs
-                        </p>
-                        <br />
+                        <br/>
                         <div className="col s6">
-                            <Link
-                                to = "/registration"
+                            <Link 
+                                to = "/register"
                                 style = {{
-                                    width: "135px",
-                                    borderRadius: "5px",
+                                    width: "140px",
+                                    borderRadius: "3px",
                                     letterSpacing: "1.5px"
                                 }}
-                                className="btn btn-large waves-effect waves-light hoverable blue accent-3">
-                                    Register
-                                </Link>
+                                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                                >
+                                Register
+                            </Link>
                         </div>
                         <div className="col s6">
-                            <Link
-                                to="/login"
-                                style={{
-                                    width: "135px",
-                                    borderRadius: "5px",
-                                    letterSpacing: "1px"
+                        <Link 
+                                to = "/login"
+                                style = {{
+                                    width: "140px",
+                                    borderRadius: "3px",
+                                    letterSpacing: "1.5px"
                                 }}
-                                className = "btn btn-large-flat waves-effect white black-text"
+                                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                                 >
-                                    Login
-                                </Link>
+                                Login
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -49,5 +44,5 @@ class LandingPage extends Component {
     }
 }
 
-
 export default LandingPage;
+

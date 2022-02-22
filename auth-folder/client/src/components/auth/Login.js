@@ -49,6 +49,14 @@ class Login extends Component {
             password: this.state.password
         };
 
+        // fetch('http://localhost:5010/api/users/login', {
+        //     method: 'POST',
+        //     body: {
+        //         email: userData.email,
+        //         password: userData.password
+        //     }
+        // })
+
         // await fetch("http://localhost:5010/record/add", {
         //     method: "POST",
         //     headers: {
@@ -57,7 +65,7 @@ class Login extends Component {
         //     body: JSON.stringify(userData),
         //   })
 
-        this.props.loginUser(userData); // since we handle the redirect -- for redux
+        //this.props.loginUser(userData); // since we handle the redirect -- for redux
 
         console.log(userData);
     };

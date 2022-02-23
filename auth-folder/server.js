@@ -16,6 +16,8 @@ const cors = require('cors'); //////////
 
 
 const app = express();
+
+app.use(cors());
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
@@ -46,13 +48,9 @@ require("./config/passport")(passport);
 //Maps to the users routes
 app.use("/api/users", users);
 
-//enable preflight requests
 
-
-//app.use(cors()); /////////////
 
 const port = process.env.PORT || 5010; //typical port is 5000, but apple put airplay on that port so it's on 5010
 app.listen(port, () => console.log(`You can view and access your server on port ${port} !`));
 // In order to run this on Heroku, change the process.env PORT to the heroku port (it's currently 5010)
 
-app.use(cors());

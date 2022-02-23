@@ -9,7 +9,7 @@ const Validator = require("validator");
 
 module.exports = function loginInputValidation(data) {
     let errors = {};
-
+    console.log(data);
 //these are if else statements to check user inputs and decide on returns functions
     data.email = !isEmpty(data.email) ? data.email : ""; //return email if not empty
     data.password = !isEmpty(data.password) ? data.password : ""; //return password if not empty

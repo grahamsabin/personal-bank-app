@@ -46,7 +46,7 @@ if (localStorage.jwtToken) {
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
+      // <Provider store={store}>
         <BrowserRouter>
           <Navbar/>
           <Switch>
@@ -62,7 +62,7 @@ class App extends Component {
             <PrivateRoute exact path = "/dashboard" component = {Dashboard} />
           </Switch>
         </BrowserRouter>
-      </Provider> //redux
+      //</Provider> //redux
     );
   }
 }

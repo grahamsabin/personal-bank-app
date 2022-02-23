@@ -41,7 +41,7 @@ class Login extends Component {
         this.setState({ [e.target.id]: e.target.value });
     };
 
-    onSubmit = e => {
+    onSubmit = async e => {
         e.preventDefault();
 
         const userData = {
@@ -65,9 +65,9 @@ class Login extends Component {
         //     body: JSON.stringify(userData),
         //   })
 
-        //this.props.loginUser(userData); // since we handle the redirect -- for redux
+        await this.props.loginUser(userData); // since we handle the redirect -- for redux
 
-        console.log(userData);
+        //console.log(userData);
     };
     
     render(){
